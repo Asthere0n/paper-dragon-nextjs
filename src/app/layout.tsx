@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bangers, Rajdhani, Architects_Daughter } from 'next/font/google';
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const bangers = Bangers({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-bangers'
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const rajdhani = Rajdhani({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-rajdhani'
+});
+
+const architectsDaughter = Architects_Daughter({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-architects-daughter'
 });
 
 export const metadata: Metadata = {
@@ -24,13 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${bangers.variable} ${rajdhani.variable} ${architectsDaughter.variable}`}>
       <head>
-        <link rel="shortcut icon" href="./paper-dragon.svg" type="image/svg-icon" />
+        
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${bangers.variable} ${rajdhani.variable} ${architectsDaughter.variable} antialiased`}>
         {children}
       </body>
     </html>

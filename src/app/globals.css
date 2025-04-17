@@ -1,11 +1,27 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-body{
+@font-face {
+  font-family: 'Bangers';
+  src: url('/fonts/Bangers-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('/fonts/Rajdhani-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Architects Daughter';
+  src: url('/fonts/ArchitectsDaughter-Regular.ttf') format('truetype');
+}
+
+body {
   display: flex;
   flex-direction: column;
   height: 100dvh;
   align-items: center;
+  font-family: 'Bangers', cursive;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -83,6 +99,9 @@ body{
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --font-bangers: 'Bangers', cursive;
+  --font-rajdhani: 'Rajdhani', sans-serif;
+  --font-architects: 'Architects Daughter', cursive;
 }
 
 .dark {
@@ -119,7 +138,14 @@ body{
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/* Removed @font-face rules to avoid duplication */
+
 @layer base {
+  :root {
+    --font-bangers: 'Bangers';
+    --font-rajdhani: 'Rajdhani';
+    --font-architects-daughter: 'Architects Daughter'; /* Fixed variable name */
+  }
   * {
     @apply border-border outline-ring/50;
   }
