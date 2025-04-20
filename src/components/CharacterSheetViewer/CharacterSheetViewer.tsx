@@ -1,0 +1,37 @@
+"use client"
+import { useState } from "react";
+import styles from "./CharacterSheetViewer.module.css"
+
+// Components
+import NavBar from "@/components/NavBar/NavBar";
+import Summary from "./Summary/Summary"
+import Combat from "./Combat/Combat";
+import Abilities from "./Abilities/Abilities";
+import Inventory from "./Inventory/Inventory";
+import Notes from "./Notes/Notes";
+import Magic from "./Magic/Magic";
+
+export default function CharacterSheetViewer() {
+    const [view, setView] = useState("Summary")
+    return (<>
+        <h1>{view}</h1>
+        <section className="flex-grow-1 grid grid-cols-3 grid-rows-3 w-full max-w-[1500px] p-4 gap-4">
+            {view === "Summary" ? (
+            <Summary style={styles} />
+            ) : null}
+            {view === "Combat" ? (
+            <Combat style={styles} />
+            ) : view === "Abilities" ? (
+            <Abilities style={styles} />
+            ) : view === "Inventory" ? (
+            <Inventory style={styles} />
+            ) : view === "Notes" ? (
+            <Notes style={styles} />
+            ) : view === "Magic" ? (
+            <Magic style={styles} />
+            ) : null}
+        </section>
+        <NavBar selector={setView} />
+    </>
+    )
+}
