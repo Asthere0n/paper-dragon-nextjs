@@ -1,6 +1,8 @@
 "use client"
 import { useState } from "react";
 import styles from "./CharacterSheetViewer.module.css"
+import testCharacter from "@/test/testCharacter"; // This will be fetched from server
+
 
 // Components
 import NavBar from "@/components/NavBar/NavBar";
