@@ -8,7 +8,7 @@ import Summary from "./Summary/Summary"
 import Combat from "./Combat/Combat";
 import Abilities from "./Abilities/Abilities";
 import Inventory from "./Inventory/Inventory";
-import Notes from "./Notes/Notes";
+import Journal from "./Journal/Journal";
 import Magic from "./Magic/Magic";
 
 export default function CharacterSheetViewer() {
@@ -25,8 +25,8 @@ export default function CharacterSheetViewer() {
             <Abilities style={styles} />
             ) : view === "Inventory" ? (
             <Inventory style={styles} />
-            ) : view === "Notes" ? (
-            <Notes style={styles} />
+            ) : view === "Journal" ? (
+            <Journal style={styles} />
             ) : view === "Magic" ? (
             <Magic style={styles} />
             ) : null}

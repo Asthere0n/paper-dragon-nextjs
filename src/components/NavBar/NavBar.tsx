@@ -26,7 +26,7 @@ export default function NavBar({ selector }: { selector: (view: string) => void 
             <li onClick={() => handleClick(1, "Combat")} className={style.link}><Link href="#"><CombatIcon width={32} height={32}/></Link></li>
             <li onClick={() => handleClick(2, "Inventory")} className={style.link}><Link href="#"><TreasureIcon width={32} height={32}/></Link></li>
             <li onClick={() => handleClick(3, "Abilities")} className={style.link}><Link href="#"><HeartIcon width={32} height={32}/></Link></li>
-            <li onClick={() => handleClick(4, "Notes")} className={style.link}><Link href="#"><NotesIcon width={32} height={32}/></Link></li>
+            <li onClick={() => handleClick(4, "Journal")} className={style.link}><Link href="#"><NotesIcon width={32} height={32}/></Link></li>
             <li onClick={() => handleClick(5, "Magic")} className={style.link}><Link href="#"><MagicIcon width={32} height={32}/></Link></li>
             <span className={`${style.highlight} w-12 h-12 bg-amber-400 rounded-2xl`}></span>
         </ul>
