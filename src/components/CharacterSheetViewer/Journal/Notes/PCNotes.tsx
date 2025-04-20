@@ -7,7 +7,7 @@ type Props = {
 export default function PCNotes({ customStyles }: Props) {
   return (
     <div className={`${styles.vignette} col-start-3 row-start-1 row-end-3`} style={customStyles}>
-      PCNotes
+      <h2 className={styles.title}>Notes</h2>
     </div>
   )
 }

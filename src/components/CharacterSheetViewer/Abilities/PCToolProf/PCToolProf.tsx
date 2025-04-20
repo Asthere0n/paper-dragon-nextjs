@@ -7,7 +7,9 @@ type Props = {
 export default function PCToolProf({ customStyles }: Props) {
   return (
     <div className={`${styles.vignette} col-start-2 row-start-3 row-end-4`} style={customStyles}>
-      Tool/Language proficiency
+      <h2 className={styles.title}>
+      Tool & Language proficiency
+      </h2>
     </div>
   )
 }

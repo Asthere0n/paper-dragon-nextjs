@@ -7,7 +7,9 @@ type Props = {
 export default function PCSpellKnown({ customStyles }: Props) {
   return (
     <div className={`${styles.vignette} col-start-3 row-start-1 row-end-4`} style={customStyles}>
-      SpellsKnown
+      <h2 className={styles.title}>
+      Spells Known
+      </h2>
     </div>
   )
 }

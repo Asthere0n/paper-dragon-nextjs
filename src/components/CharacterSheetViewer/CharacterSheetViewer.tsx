@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useState, createContext } from "react";
 import styles from "./CharacterSheetViewer.module.css"
 import testCharacter from "@/test/testCharacter"; // This will be fetched from server
 
@@ -14,6 +14,7 @@ import Journal from "./Journal/Journal";
 import Magic from "./Magic/Magic";
 
 export default function CharacterSheetViewer() {
+    const CharacterContext = createContext(testCharacter)
     const [view, setView] = useState("Summary")
     return (<>
         <h1>{view}</h1>

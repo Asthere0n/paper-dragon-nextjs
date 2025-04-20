@@ -7,7 +7,9 @@ type Props = {
 export default function PCFeats({ customStyles }: Props) {
   return (
     <div className={`${styles.vignette} col-start-2 row-start-2 row-end-4`} style={customStyles}>
-      PCFeats
+      <h2 className={styles.title}>
+      Feats
+      </h2>
     </div>
   )
 }

@@ -7,7 +7,9 @@ type Props = {
 export default function PCAllies({ customStyles }: Props) {
   return (
     <div className={`${styles.vignette} col-start-2 row-start-3 row-end-4`} style={customStyles}>
-      PCAllies
+      <h2 className={styles.title}>
+        Allies and Foes
+      </h2>
     </div>
   )
 }

@@ -1,7 +1,28 @@
-export default testCharacter = {
+const testCharacter = {
     name: "Lancelot",
     Background: "Noble",
     img: "",
+    profBonus: 2,
+    skillProf: [
+        {title: "Athletics", profiency: 1},
+        {title: "Animal Handling", profiency: 1},
+        {title: "Acrobatics", profiency: 0},
+        {title: "Arcana", profiency: 0},
+        {title: "Deception", profiency: 0},
+        {title: "History", profiency: 0},
+        {title: "Insight", profiency: 0},
+        {title: "Intimidation", profiency: 0},
+        {title: "Investigation", profiency: 0},
+        {title: "Medicine", profiency: 0},
+        {title: "Nature", profiency: 0},
+        {title: "Perception", profiency: 0},
+        {title: "Performance", profiency: 0},
+        {title: "Persuasion", profiency: 0},
+        {title: "Religion", profiency: 0},
+        {title: "Sleight of Hand", profiency: 0},
+        {title: "Stealth", profiency: 0},
+        {title: "Survival", profiency: 0}
+    ],
     class: [{ class: "Paladin", Subclass: "Oath of Vengance", level: 2 }],
     feats: [{
         title: "Polearm Master",
@@ -26,3 +47,5 @@ You can also expend 5 Hit Points fr`,
         reference: "PHB p.109"
     }]
 }
+
+export default testCharacter;

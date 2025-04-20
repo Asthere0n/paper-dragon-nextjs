@@ -7,7 +7,9 @@ type Props = {
 export default function PCInitiative({ customStyles }: Props) {
   return (
     <div className={`${styles.vignette} col-start-2 row-start-1 row-end-2`} style={customStyles}>
-      Initiative
+      <h2 className={styles.title}>
+        Initiative
+      </h2>
     </div>
   )
 }
