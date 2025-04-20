@@ -1,3 +1,4 @@
+// Components
 import Backpack from "./Backpack/Backpack"
 import Equiped from "./Equiped/Equiped"
 
