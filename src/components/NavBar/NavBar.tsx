@@ -24,8 +24,8 @@ export default function NavBar({ selector }: { selector: (view: string) => void 
         <ul className={`${style.nav} relative flex items-center gap-7 mb-5 bg-gray-800 p-3 text-white rounded-3xl px-7`}>
             <li onClick={() => handleClick(0, "Summary")} className={style.link}><Link href="#"><SummaryIcon width={32} height={32}/></Link></li>
             <li onClick={() => handleClick(1, "Combat")} className={style.link}><Link href="#"><CombatIcon width={32} height={32}/></Link></li>
-            <li onClick={() => handleClick(2, "Inventory")} className={style.link}><Link href="#"><TreasureIcon width={32} height={32}/></Link></li>
-            <li onClick={() => handleClick(3, "Abilities")} className={style.link}><Link href="#"><HeartIcon width={32} height={32}/></Link></li>
+            <li onClick={() => handleClick(2, "Abilities")} className={style.link}><Link href="#"><HeartIcon width={32} height={32}/></Link></li>
+            <li onClick={() => handleClick(3, "Inventory")} className={style.link}><Link href="#"><TreasureIcon width={32} height={32}/></Link></li>
             <li onClick={() => handleClick(4, "Journal")} className={style.link}><Link href="#"><NotesIcon width={32} height={32}/></Link></li>
             <li onClick={() => handleClick(5, "Magic")} className={style.link}><Link href="#"><MagicIcon width={32} height={32}/></Link></li>
             <span className={`${style.highlight} w-12 h-12 bg-amber-400 rounded-2xl`}></span>
