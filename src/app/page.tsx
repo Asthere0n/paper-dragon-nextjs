@@ -7,6 +7,6 @@ import CharacterSheetViewer from "@/components/CharacterSheetViewer/CharacterShe
 export default function Home() {
   return (<>
     <Header />
-      <CharacterSheetViewer />
+    <CharacterSheetViewer />
   </>);
 }

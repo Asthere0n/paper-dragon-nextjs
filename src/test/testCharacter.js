@@ -1,7 +1,15 @@
+import { features } from "process";
+
 const testCharacter = {
     name: "Lancelot",
-    Background: "Noble",
-    img: "",
+    Background: 
+    {
+        title:"Noble",
+        ablityScores:["Strenght", "Intelligence", "Charisma"],
+        skillProf:["History", "Persuasion"],
+        toolProf:["Gaming set"],
+    },
+    img: "https://i.pinimg.com/736x/4e/e6/e9/4ee6e9a7d2097e08dfff3a6a5e285eec.jpg",
     profBonus: 2,
     skillProf: [
         {title: "Athletics", profiency: 1},
