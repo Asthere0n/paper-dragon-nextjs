@@ -1,0 +1,58 @@
+{
+    "name": "Lancelot",
+    "Background": {
+        "title": "Noble",
+        "abilityScores": [
+            "Strength",
+            "Intelligence",
+            "Charisma"
+        ],
+        "skillProf": [
+            "History",
+            "Persuasion"
+        ],
+        "toolProf": [
+            "Gaming set"
+        ]
+    },
+    "img": "https://i.pinimg.com/736x/4e/e6/e9/4ee6e9a7d2097e08dfff3a6a5e285eec.jpg",
+    "profBonus": 2,
+    "skillProf": [
+        { "title": "Athletics", "proficiency": 1 },
+        { "title": "Animal Handling", "proficiency": 1 },
+        { "title": "Acrobatics", "proficiency": 0 },
+        { "title": "Arcana", "proficiency": 0 },
+        { "title": "Deception", "proficiency": 0 },
+        { "title": "History", "proficiency": 0 },
+        { "title": "Insight", "proficiency": 0 },
+        { "title": "Intimidation", "proficiency": 0 },
+        { "title": "Investigation", "proficiency": 0 },
+        { "title": "Medicine", "proficiency": 0 },
+        { "title": "Nature", "proficiency": 0 },
+        { "title": "Perception", "proficiency": 0 },
+        { "title": "Performance", "proficiency": 0 },
+        { "title": "Persuasion", "proficiency": 0 },
+        { "title": "Religion", "proficiency": 0 },
+        { "title": "Sleight of Hand", "proficiency": 0 },
+        { "title": "Stealth", "proficiency": 0 },
+        { "title": "Survival", "proficiency": 0 }
+    ],
+    "class": [
+        { "class": "Paladin", "Subclass": "Oath of Vengeance", "level": 2 }
+    ],
+    "feats": [
+        {
+            "title": "Polearm Master",
+            "description": "You gain the following benefits.\n\nAbility Score Increase. Increase your Dexterity or Strength by 1, to a maximum of 20.\n\nPole Strike. Immediately after you take the Attack action and attack with a Quarterstaff, a Spear, or a weapon that has the Heavy and Reach properties, you can use a Bonus Action to make a melee attack with the opposite end of the weapon. The weapon deals Bludgeoning damage, and the weapon's damage die for this attack is a d4.\n\nReactive Strike. While you're holding a Quarterstaff, a Spear, or a weapon that has the Heavy and Reach properties, you can take a Reaction to make one melee attack against a creature that enters the reach you have with that weapon.",
+            "source": "PHB p.206"
+        }
+    ],
+    "features": [
+        {
+            "title": "Lay on hands",
+            "description": "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you finish a Long Rest. With that pool, you can restore a total number of Hit Points equal to five times your Paladin level.\n\nAs a Bonus Action, you can touch a creature (which could be yourself) and draw power from the pool of healing to restore a number of Hit Points to that creature, up to the maximum amount remaining in the pool.\n\nYou can also expend 5 Hit Points from the pool to cure the target of one disease or neutralize one poison affecting it.",
+            "source": "Paladin",
+            "reference": "PHB p.109"
+        }
+    ]
+}
