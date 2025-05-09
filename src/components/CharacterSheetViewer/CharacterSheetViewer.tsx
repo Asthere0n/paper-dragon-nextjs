@@ -13,12 +13,11 @@ import Inventory from "./Inventory/Inventory";
 import Journal from "./Journal/Journal";
 import Magic from "./Magic/Magic";
 
-export const CharacterContext = createContext<any>(null)
+export const CharacterContext = createContext<any|null>(null)
 
 export default function CharacterSheetViewer() {
     const [view, setView] = useState("Summary")
     return (<>
-        <h1>{view}</h1>
         <CharacterContext.Provider value={testCharacter}>
         <section className="flex-grow-1 grid grid-cols-3 grid-rows-3 w-full max-w-[1500px] p-4 gap-4">
             {view === "Summary" ? (
