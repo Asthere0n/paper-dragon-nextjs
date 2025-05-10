@@ -1,6 +1,6 @@
 {
     "name": "Lancelot",
-    "Background": {
+    "background": {
         "title": "Noble",
         "abilityScores": [
             "Strength",
