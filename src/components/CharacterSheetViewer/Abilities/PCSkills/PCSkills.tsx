@@ -7,7 +7,7 @@ type Props = {
 
 export default function PCSkills({ customStyles }: Props) {
   return (
-    <div className={`${styles.vignette} col-start-3 row-start-1 row-end-4`} style={customStyles}>
+    <div className={`${styles.vignette} col-start-3 row-start-1 row-end-4 flex flex-col`} style={customStyles}>
       <h2 className={styles.title}>
         Skills
       </h2>

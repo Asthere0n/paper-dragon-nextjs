@@ -44,7 +44,7 @@
         { "title": "History", "proficiency": 0, "ability": "Intelligence" },
         { "title": "Insight", "proficiency": 0, "ability": "Wisdom" },
         { "title": "Intimidation", "proficiency": 0, "ability": "Charisma" },
-        { "title": "Investigation", "proficiency": 0, "ability": "Intelligence" },
+        { "title": "Investigation", "proficiency": 2, "ability": "Intelligence" },
         { "title": "Medicine", "proficiency": 0, "ability": "Wisdom" },
         { "title": "Nature", "proficiency": 0, "ability": "Intelligence" },
         { "title": "Perception", "proficiency": 0, "ability": "Wisdom" },

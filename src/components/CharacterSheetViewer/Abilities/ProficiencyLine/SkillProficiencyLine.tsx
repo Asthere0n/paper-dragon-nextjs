@@ -8,14 +8,14 @@ type ProficiencyLineProps = {
     stat: string
 }
 
-export default function ProficiencyLine({ title, stat }: ProficiencyLineProps) {
+export default function SkillProficiencyLine({ title, stat }: ProficiencyLineProps) {
     const characterData = useContext(CharacterContext)
     const ability = characterData.abilityScores[stat]
     const abilityMod = calcAbilityMod(ability)
 
     // Recovering proficiency with the saving throw
     let proficiency = 0
-    characterData.savingProf.map(ab=>{
+    characterData.skillProf.map(ab=>{
         if (ab.title == stat){
             proficiency = ab.proficiency
         }
@@ -25,9 +25,10 @@ export default function ProficiencyLine({ title, stat }: ProficiencyLineProps) {
     const profBonus = proficiency * characterData.profBonus
     const bonusToRoll = profBonus + abilityMod
     return (
-        <div className='flex justify-around'>
+        <div className='flex justify-between px-3  border-b-2 border-gray-500 flex-grow-1 items-center'>
             <h3>{title}</h3>
-            <div>
+            <div className='flex gap-8'>
+                <p>{stat}</p>
                 <p>{bonusToRoll}</p>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import styles from "../../CharacterSheetViewer.module.css"
-import ProficiencyLine from "../ProficiencyLine/ProficiencyLine"
+import SaveProficiencyLine from "../ProficiencyLine/SaveProficiencyLine"
 
 type Props = {
   customStyles?: React.CSSProperties
@@ -11,12 +11,12 @@ export default function PCSavingThrows({ customStyles }: Props) {
       <h2 className={styles.title}>
         Saves
       </h2>
-      <ProficiencyLine title="Strength" stat="Strength"/>
-      <ProficiencyLine title="Dexterity" stat="Dexterity"/>
-      <ProficiencyLine title="Constitution" stat="Constitution"/>
-      <ProficiencyLine title="Intelligence" stat="Intelligence"/>
-      <ProficiencyLine title="Wisdom" stat="Wisdom"/>
-      <ProficiencyLine title="Charisma" stat="Charisma"/>
+      <SaveProficiencyLine title="Strength" stat="Strength"/>
+      <SaveProficiencyLine title="Dexterity" stat="Dexterity"/>
+      <SaveProficiencyLine title="Constitution" stat="Constitution"/>
+      <SaveProficiencyLine title="Intelligence" stat="Intelligence"/>
+      <SaveProficiencyLine title="Wisdom" stat="Wisdom"/>
+      <SaveProficiencyLine title="Charisma" stat="Charisma"/>
     </div>
   )
 }
