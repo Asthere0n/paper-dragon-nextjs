@@ -17,6 +17,13 @@
     },
     "img": "https://i.pinimg.com/736x/4e/e6/e9/4ee6e9a7d2097e08dfff3a6a5e285eec.jpg",
     "profBonus": 2,
+    "abilityScores": {
+        "Strength":10, 
+        "Dexterity":16, 
+        "Constitution":18, 
+        "Intelligence":19, 
+        "Wisdom":14, 
+        "Charisma":12},
     "skillProf": [
         { "title": "Athletics", "proficiency": 1 },
         { "title": "Animal Handling", "proficiency": 1 },
