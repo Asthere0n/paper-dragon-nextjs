@@ -10,7 +10,7 @@ type AbilityProps = {
 
 export default function Ability({ stat }: AbilityProps) {
   const characterData = useContext(CharacterContext)
-  const ability = characterData.abilityScores[stat]
+  const ability = characterData.proficiencies.abilityScores[stat]
   const abilityMod = calcAbilityMod(ability)
   
   return (<>

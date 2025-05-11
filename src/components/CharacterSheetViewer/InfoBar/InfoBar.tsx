@@ -1,6 +1,6 @@
 
 
-export default function CharacterInfo() {
+export default function InfoBar() {
     
   return (
     <ul className="flex w-full justify-around bg-amber-400 p-1">

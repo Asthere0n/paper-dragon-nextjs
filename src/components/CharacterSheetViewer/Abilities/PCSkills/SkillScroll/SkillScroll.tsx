@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { CharacterContext } from "../../../CharacterSheetViewer"
-import SkillProficiencyLine from "../../ProficiencyLine/SkillProficiencyLine"
+import SkillProficiencyLine from "../SkillProficiencyLine"
 
 
 type skill = {
@@ -11,11 +11,12 @@ type skill = {
 
 export default function SkillScroll() {
   const characterData = useContext(CharacterContext)
+  const characterProficiencies = characterData.proficiencies
 
 
   return (
     <div className="flex flex-col flex-grow-1">
-      {characterData.skillProf.map((skill: skill) => (
+      {characterProficiencies.skillProf.map((skill: skill) => (
         <SkillProficiencyLine key={skill.title} title={skill.title} stat={skill.ability} />
       ))}
     </div>

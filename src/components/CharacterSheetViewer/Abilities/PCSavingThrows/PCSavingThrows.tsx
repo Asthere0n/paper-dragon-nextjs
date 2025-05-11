@@ -1,5 +1,5 @@
 import styles from "../../CharacterSheetViewer.module.css"
-import SaveProficiencyLine from "../ProficiencyLine/SaveProficiencyLine"
+import SaveProficiencyLine from "./SaveProficiencyLine"
 
 type Props = {
   customStyles?: React.CSSProperties

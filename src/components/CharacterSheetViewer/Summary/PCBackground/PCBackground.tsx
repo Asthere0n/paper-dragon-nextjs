@@ -9,7 +9,7 @@ type Props = {
 
 export default function PCBackground({ customStyles }: Props) {
   const characterData = useContext(CharacterContext)
-  const background = characterData.background
+  const background = characterData.characterInfo.background
   
   return (
     <div className={`${styles.vignette} row-start-1 row-end-2] flex flex-col`} style={customStyles}>

@@ -1,62 +1,165 @@
 {
-    "name": "Lancelot",
-    "background": {
-        "title": "Noble",
-        "abilityScores": [
-            "Strength",
-            "Intelligence",
-            "Charisma"
+    "characterInfo": {
+        "name": "Lancelot",
+        "background": {
+            "title": "Noble",
+            "abilityScores": [
+                "Strength",
+                "Intelligence",
+                "Charisma"
+            ],
+            "skillProf": [
+                "History",
+                "Persuasion"
+            ],
+            "toolProf": [
+                "Gaming set"
+            ]
+        },
+        "img": "https://i.pinimg.com/736x/4e/e6/e9/4ee6e9a7d2097e08dfff3a6a5e285eec.jpg"
+    },
+    "proficiencies": {
+        "profBonus": 2,
+        "abilityScores": {
+            "Strength": 10,
+            "Dexterity": 16,
+            "Constitution": 18,
+            "Intelligence": 19,
+            "Wisdom": 14,
+            "Charisma": 12
+        },
+        "savingProf": [
+            {
+                "title": "Strength",
+                "proficiency": 1,
+                "ability": "Strength"
+            },
+            {
+                "title": "Dexterity",
+                "proficiency": 0,
+                "ability": "Dexterity"
+            },
+            {
+                "title": "Constitution",
+                "proficiency": 0,
+                "ability": "Constitution"
+            },
+            {
+                "title": "Intelligence",
+                "proficiency": 0,
+                "ability": "Intelligence"
+            },
+            {
+                "title": "Wisdom",
+                "proficiency": 0,
+                "ability": "Wisdom"
+            },
+            {
+                "title": "Charisma",
+                "proficiency": 1,
+                "ability": "Charisma"
+            }
         ],
+        "toolProf": [],
         "skillProf": [
-            "History",
-            "Persuasion"
-        ],
-        "toolProf": [
-            "Gaming set"
+            {
+                "title": "Athletics",
+                "proficiency": 1,
+                "ability": "Strength"
+            },
+            {
+                "title": "Animal Handling",
+                "proficiency": 1,
+                "ability": "Wisdom"
+            },
+            {
+                "title": "Acrobatics",
+                "proficiency": 0,
+                "ability": "Dexterity"
+            },
+            {
+                "title": "Arcana",
+                "proficiency": 0,
+                "ability": "Intelligence"
+            },
+            {
+                "title": "Deception",
+                "proficiency": 0,
+                "ability": "Charisma"
+            },
+            {
+                "title": "History",
+                "proficiency": 0,
+                "ability": "Intelligence"
+            },
+            {
+                "title": "Insight",
+                "proficiency": 0,
+                "ability": "Wisdom"
+            },
+            {
+                "title": "Intimidation",
+                "proficiency": 0,
+                "ability": "Charisma"
+            },
+            {
+                "title": "Investigation",
+                "proficiency": 2,
+                "ability": "Intelligence"
+            },
+            {
+                "title": "Medicine",
+                "proficiency": 0,
+                "ability": "Wisdom"
+            },
+            {
+                "title": "Nature",
+                "proficiency": 0,
+                "ability": "Intelligence"
+            },
+            {
+                "title": "Perception",
+                "proficiency": 0,
+                "ability": "Wisdom"
+            },
+            {
+                "title": "Performance",
+                "proficiency": 0,
+                "ability": "Charisma"
+            },
+            {
+                "title": "Persuasion",
+                "proficiency": 0,
+                "ability": "Charisma"
+            },
+            {
+                "title": "Religion",
+                "proficiency": 0,
+                "ability": "Intelligence"
+            },
+            {
+                "title": "Sleight of Hand",
+                "proficiency": 0,
+                "ability": "Dexterity"
+            },
+            {
+                "title": "Stealth",
+                "proficiency": 0,
+                "ability": "Dexterity"
+            },
+            {
+                "title": "Survival",
+                "proficiency": 0,
+                "ability": "Wisdom"
+            }
         ]
     },
-    "img": "https://i.pinimg.com/736x/4e/e6/e9/4ee6e9a7d2097e08dfff3a6a5e285eec.jpg",
-    "profBonus": 2,
-    "abilityScores": {
-        "Strength":10, 
-        "Dexterity":16, 
-        "Constitution":18, 
-        "Intelligence":19, 
-        "Wisdom":14, 
-        "Charisma":12
-    },
-    "savingProf":[
-        {"title":"Strength", "proficiency":1, "ability":"Strength"},
-        {"title":"Dexterity", "proficiency":0, "ability":"Dexterity"},
-        {"title":"Constitution", "proficiency":0, "ability":"Constitution"},
-        {"title":"Intelligence", "proficiency":0, "ability":"Intelligence"},
-        {"title":"Wisdom", "proficiency":0, "ability":"Wisdom"},
-        {"title":"Charisma", "proficiency":1, "ability":"Charisma"}
-
-    ],
-    "toolProf":[],
-    "skillProf": [
-        { "title": "Athletics", "proficiency": 1, "ability": "Strength" },
-        { "title": "Animal Handling", "proficiency": 1, "ability": "Wisdom" },
-        { "title": "Acrobatics", "proficiency": 0, "ability": "Dexterity" },
-        { "title": "Arcana", "proficiency": 0, "ability": "Intelligence" },
-        { "title": "Deception", "proficiency": 0, "ability": "Charisma" },
-        { "title": "History", "proficiency": 0, "ability": "Intelligence" },
-        { "title": "Insight", "proficiency": 0, "ability": "Wisdom" },
-        { "title": "Intimidation", "proficiency": 0, "ability": "Charisma" },
-        { "title": "Investigation", "proficiency": 2, "ability": "Intelligence" },
-        { "title": "Medicine", "proficiency": 0, "ability": "Wisdom" },
-        { "title": "Nature", "proficiency": 0, "ability": "Intelligence" },
-        { "title": "Perception", "proficiency": 0, "ability": "Wisdom" },
-        { "title": "Performance", "proficiency": 0, "ability": "Charisma" },
-        { "title": "Persuasion", "proficiency": 0, "ability": "Charisma" },
-        { "title": "Religion", "proficiency": 0, "ability": "Intelligence" },
-        { "title": "Sleight of Hand", "proficiency": 0, "ability": "Dexterity" },
-        { "title": "Stealth", "proficiency": 0, "ability": "Dexterity" },
-        { "title": "Survival", "proficiency": 0, "ability": "Wisdom" }
-    ],
     "class": [
-        { "class": "Paladin", "Subclass": "Oath of Vengeance", "level": 2 }
+        {
+            "class": "Paladin",
+            "Subclass": "Oath of Vengeance",
+            "level": 2
+        }
     ],
     "feats": [
         {
@@ -72,5 +175,31 @@
             "source": "Paladin",
             "reference": "PHB p.109"
         }
-    ]
+    ],
+    "combat": {
+        "AC": [
+            {
+                "title": "Chain Mail",
+                "base": 16,
+                "DisadvantageStealth": true
+            },
+            {
+                "title": "Scale Mail",
+                "base": 14,
+                "modifier": [
+                    "Dexterity"
+                ],
+                "DisadvantageStealth": true
+            },
+            {
+                "title": "Unarmed Defense",
+                "base": 10,
+                "modifier": [
+                    "Dexterity",
+                    "Constitution"
+                ],
+                "DisadvantageStealth": false
+            }
+        ]
+    }
 }

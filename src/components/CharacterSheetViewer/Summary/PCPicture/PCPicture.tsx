@@ -11,16 +11,16 @@ type Props = {
 
 
 export default function PCPicture({ customStyles }: Props) {
-  const Character = useContext(CharacterContext)
+  const characterData = useContext(CharacterContext)
 
   return (
     <div className={`${styles.vignette} col-start-1 row-start-1 row-end-4`} style={customStyles}>
       <h2 className={styles.title}>
-        {Character.name}
+        {characterData.characterInfo.name}
       </h2>
       <div>
       <Image 
-      src={Character.img}
+      src={characterData.characterInfo.img}
       alt="Character Portrait"
       fill={true}
       objectFit="cover"
