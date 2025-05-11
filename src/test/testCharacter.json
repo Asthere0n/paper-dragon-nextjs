@@ -181,6 +181,7 @@
             {
                 "title": "Chain Mail",
                 "base": 16,
+                "modifier":[],
                 "DisadvantageStealth": true
             },
             {
