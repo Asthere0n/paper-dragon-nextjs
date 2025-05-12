@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Shield({ isShieldEquiped, setShieldEquiped, allowsShield }) {
+export default function Shield({ isShieldEquiped, equipeShield, allowsShield }) {
 
   return (
     <div className='flex flex-col'>
@@ -9,7 +9,7 @@ export default function Shield({ isShieldEquiped, setShieldEquiped, allowsShield
       name="shield" 
       id="shield" 
       checked={isShieldEquiped && allowsShield} 
-      onChange={(e) => setShieldEquiped(e.target.checked)}
+      onChange={(e) => equipeShield(e.target.checked)}
       disabled={!allowsShield}
       />
       <label htmlFor="shield">Shield</label>
