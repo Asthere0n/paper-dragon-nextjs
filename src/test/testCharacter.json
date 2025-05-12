@@ -182,7 +182,8 @@
                 "title": "Chain Mail",
                 "base": 16,
                 "modifier":[],
-                "DisadvantageStealth": true
+                "DisadvantageStealth": true,
+                "AllowsShield": true
             },
             {
                 "title": "Scale Mail",
@@ -190,17 +191,20 @@
                 "modifier": [
                     "Dexterity"
                 ],
-                "DisadvantageStealth": true
+                "DisadvantageStealth": true,
+                "AllowsShield":true
             },
             {
                 "title": "Unarmed Defense",
                 "base": 10,
                 "modifier": [
                     "Dexterity",
-                    "Constitution"
+                    "Wisdom"
                 ],
-                "DisadvantageStealth": false
+                "DisadvantageStealth": false,
+                "AllowsShield": false
             }
-        ]
+        ],
+        "Shield":2
     }
 }

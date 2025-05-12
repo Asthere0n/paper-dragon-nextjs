@@ -1,26 +1,8 @@
-import { useContext } from "react";
-import { CharacterContext } from "@/components/CharacterSheetViewer/CharacterSheetViewer";
-
 // Components
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { calcAbilityMod } from "@/components/utils/calcAbilityMod";
+import calculateAC from "../calculateAC";
 
-export default function Armor({armorOptions, selectedArmorClass, onArmorClassChange}) {
-    const characterData = useContext(CharacterContext)
-    const abilityScores = characterData.proficiencies.abilityScores
-
-    function calculateAC(ArmorClass){
-        let finalAC = ArmorClass.base
-
-        if(ArmorClass.modifier !== undefined){
-            ArmorClass.modifier.forEach((ability) => {
-                finalAC += calcAbilityMod(abilityScores[ability])
-                // console.log(ability)
-            });
-        }
-
-        return finalAC
-    }
+export default function Armor({armorOptions, selectedArmorClass, onArmorClassChange, isShieldEquiped}) {
 
     return (
         <div>
@@ -29,7 +11,7 @@ export default function Armor({armorOptions, selectedArmorClass, onArmorClassCha
             </h3>
 
             <p>
-                {selectedArmorClass}
+                {calculateAC(selectedArmorClass, isShieldEquiped)}
             </p>
 
             <Select onValueChange={(value) => onArmorClassChange(value)}>
@@ -38,7 +20,7 @@ export default function Armor({armorOptions, selectedArmorClass, onArmorClassCha
                 </SelectTrigger>
                 <SelectContent>
                     {armorOptions.map(AC => (
-                        <SelectItem key={AC.title} value={calculateAC(AC)}>
+                        <SelectItem key={AC.title} value={AC}>
                             {AC.title}
                         </SelectItem>
                     ))}

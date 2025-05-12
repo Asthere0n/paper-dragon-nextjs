@@ -1,5 +1,5 @@
 import styles from "../../CharacterSheetViewer.module.css"
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { CharacterContext } from "../../CharacterSheetViewer"
 
 // Components
@@ -16,6 +16,13 @@ export default function PCArmorClass({ customStyles }: Props) {
   const characterAC = characterData.combat.AC
 
   const [selectedAC, setSelectedAC] = useState(10)
+  const [shieldEquiped, setShieldEquiped] = useState(false)
+
+  useEffect(()=>{
+    if (!selectedAC.AllowsShield){
+      setShieldEquiped(false)
+    }
+  },[selectedAC])
 
   return (
     <div className={`${styles.vignette} col-start-1 row-start-1 row-end-2 flex flex-col`} style={customStyles}>
@@ -27,8 +34,11 @@ export default function PCArmorClass({ customStyles }: Props) {
         armorOptions={characterAC} 
         selectedArmorClass={selectedAC}
         onArmorClassChange={setSelectedAC}
+        isShieldEquiped={shieldEquiped}
+        
         />
-        <Shield/>
+        <Shield isShieldEquiped={shieldEquiped} equipeShield={setShieldEquiped} allowsShield={selectedAC.AllowsShield}/>
+        
       </div>
     </div>
   )
