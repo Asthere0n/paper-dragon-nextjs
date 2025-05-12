@@ -14,7 +14,7 @@ function calculateAC(ArmorClass, shield) {
         });
 
         if(shield){
-            finalAC += characterData.combat.Shield
+            finalAC += characterData.combat.shield
         }
     }
     return finalAC

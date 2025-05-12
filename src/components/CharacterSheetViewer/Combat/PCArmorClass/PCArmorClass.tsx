@@ -37,8 +37,7 @@ export default function PCArmorClass({ customStyles }: Props) {
         isShieldEquiped={shieldEquiped}
         
         />
-        <Shield isShieldEquiped={shieldEquiped} equipeShield={setShieldEquiped} allowsShield={selectedAC.AllowsShield}/>
-        
+        <Shield isShieldEquiped={shieldEquiped} equipeShield={setShieldEquiped} allowsShield={selectedAC.AllowsShield}/> 
       </div>
     </div>
   )
