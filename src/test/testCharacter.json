@@ -152,6 +152,9 @@
                 "proficiency": 0,
                 "ability": "Wisdom"
             }
+        ],
+        "weaponProf":[
+
         ]
     },
     "class": [
@@ -206,6 +209,29 @@
             }
         ],
         "shield":2,
-        "WeaponAttacks":[]
+        "weaponAttacks":[
+            {
+                "title":"Shortsword",
+                "type":"shortsword",
+                "magicBonus":2,
+                "damageDie":"1d6",
+                "damageType":"Slashing",
+                "secondaryDamage":null,
+                "secondaryDamageType":"",
+                "ability":["Strength","Dexterity"],
+                "properties":["Finesse", "Light","Vex"]
+            },
+            {
+                "title":"Poisonous Longbow",
+                "type":"longbow",
+                "magicBonus":0,
+                "damageDie":"1d8",
+                "damageType":"Piercing",
+                "secondaryDamage":"2d4",
+                "secondaryDamageType":"Poison",
+                "ability":["Dexterity"],
+                "properties":["Ammunition", "Heavy", "Range 150/600", "Two-Handed", "Slow"]
+            }
+        ]
     }
 }
