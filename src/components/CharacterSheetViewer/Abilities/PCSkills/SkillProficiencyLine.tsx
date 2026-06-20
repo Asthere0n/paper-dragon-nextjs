@@ -25,11 +25,11 @@ export default function SkillProficiencyLine({ title, stat }: ProficiencyLinePro
     const profBonus = proficiency * characterProficiencies.profBonus
     const bonusToRoll = profBonus + abilityMod
     return (
-        <div className='flex justify-between px-3  border-b-2 border-gray-500 flex-grow-1 items-center'>
-            <h3>{title}</h3>
-            <div className='flex gap-8'>
-                <p>{stat}</p>
-                <p>{bonusToRoll}</p>
+        <div className='mx-3 flex flex-grow-1 flex-wrap items-center justify-between gap-2 border-b-[3px] border-black px-2 py-2 odd:bg-white/50'>
+            <h3 className='uppercase tracking-wide'>{title}</h3>
+            <div className='flex items-center gap-2 sm:gap-3'>
+                <p className='rounded-full border-2 border-black bg-white px-2 text-xs uppercase'>{stat}</p>
+                <p className='min-w-10 border-[3px] border-black bg-[#ffd600] text-center text-lg shadow-[2px_2px_0_#111] sm:text-xl'>{bonusToRoll}</p>
             </div>
         </div>
     )

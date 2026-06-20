@@ -17,10 +17,10 @@ export default function PCFeatures({ customStyles }: Props) {
 
       <Accordion type="multiple">
         {featuresArray.map((feature) => (
-          <AccordionItem value={feature.title} key={feature.title} className="bg-gray-400">
+          <AccordionItem value={feature.title} key={feature.title}>
             <AccordionTrigger>{feature.title}</AccordionTrigger>
             <AccordionContent>
-              <div className="bg-gray-200">
+              <div>
                 <p>{feature.description}</p>
                 <p>src: {feature.source}</p>
                 <p>ref: {feature.reference}</p>

@@ -3,15 +3,17 @@
 ## Commands
 
 - Use npm; this repo has `package-lock.json` and no pnpm/yarn lockfile. Start with `npm ci` when dependencies are missing.
+- Next 16 requires Node `>=20.9.0`.
 - Dev server: `npm run dev` (`next dev --turbopack`).
+- Lint uses `eslint .`; `next lint` is not valid on Next 16.
 - Verification commands: `npm run lint`, `npx tsc --noEmit`, and `npm run build`.
 - There is no test runner or `npm test` script configured; `src/test/testCharacter.json` is app fixture data, not a test suite.
 
 ## Current Baseline
 
-- As of this file, `npm run lint` fails on existing issues: `no-explicit-any` in `CharacterSheetViewer.tsx`, unused `styles` variables in section components, and a hook rule violation in `Combat/PCArmorClass/calculateAC.ts`.
-- `npx tsc --noEmit` also fails on existing implicit `any` errors, the CSS-module object passed as a `style` prop, `AllowsShield` type mismatches, and `Logo.tsx` treating a PNG import as `{ src }` while `src/lib/custom.d.ts` declares PNGs as `string`.
-- `npm run build` compiles first, then fails during lint/type validation for the same baseline issues.
+- As of this file, `npm run lint` fails on existing issues: `no-explicit-any` in `CharacterSheetViewer.tsx`, a hook rule violation in `Combat/PCArmorClass/calculateAC.ts`, and Next 16 React Hooks `set-state-in-effect` errors in `PCArmorClass.tsx` and `src/components/ui/carousel.tsx`; unused `styles` variables and `Logo.tsx` `<img>` usage are warnings.
+- `npx tsc --noEmit` fails on existing implicit `any` errors, the CSS-module object passed as a `style` prop, `AllowsShield` type mismatches, and armor select value type mismatches.
+- `npm run build` compiles first, then fails during TypeScript validation for the same baseline type issues.
 
 ## Architecture Notes
 

@@ -29,7 +29,7 @@ export default function PCArmorClass({ customStyles }: Props) {
       <h2 className={styles.title}>
         Armor Class
       </h2>
-      <div className="flex w-full justify-around items-center flex-grow-1">
+      <div className="flex flex-grow-1 w-full flex-col items-center justify-around gap-5 py-4 sm:flex-row sm:gap-3 sm:py-0">
         <Armor 
         armorOptions={characterAC} 
         selectedArmorClass={selectedAC}

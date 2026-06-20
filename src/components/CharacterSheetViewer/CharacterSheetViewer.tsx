@@ -20,7 +20,7 @@ export default function CharacterSheetViewer() {
     const characterData = JSON.parse(JSON.stringify(testCharacter));
     return (<>
         <CharacterContext.Provider value={characterData}>
-        <section className="flex-grow-1 grid grid-cols-3 grid-rows-3 w-full max-w-[1500px] p-4 gap-4">
+        <section className={styles.viewerGrid}>
             {view === "Summary" ? (
                 <Summary style={styles} />
             ) : null}
