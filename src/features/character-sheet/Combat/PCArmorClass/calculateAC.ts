@@ -1,0 +1,23 @@
+import { useContext } from "react";
+import { CharacterContext } from "@/features/character-sheet/character-context";
+import { calcAbilityMod } from "@/lib/character/calcAbilityMod";
+
+
+function calculateAC(ArmorClass, shield) {
+    let finalAC = ArmorClass.base
+    const characterData = useContext(CharacterContext)
+    const abilityScores = characterData.proficiencies.abilityScores
+
+    if (ArmorClass.modifier) {
+        ArmorClass.modifier.forEach((ability) => {
+            finalAC += calcAbilityMod(abilityScores[ability])
+        });
+
+        if(shield){
+            finalAC += characterData.combat.shield
+        }
+    }
+    return finalAC
+}
+
+export default calculateAC

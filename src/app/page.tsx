@@ -1,7 +1,7 @@
 //Components
-import Header from "../components/Header/Header";
-import CharacterSheetViewer from "@/components/CharacterSheetViewer/CharacterSheetViewer";
-import InfoBar from "@/components/CharacterSheetViewer/InfoBar/InfoBar";
+import Header from "@/components/layout/Header/Header";
+import CharacterSheetViewer from "@/features/character-sheet/CharacterSheetViewer";
+import InfoBar from "@/features/character-sheet/InfoBar/InfoBar";
 
 export default function Home() {
   return (<>
