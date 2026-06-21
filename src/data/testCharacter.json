@@ -20,7 +20,11 @@
                 "Gaming set"
             ]
         },
-        "img": "https://i.pinimg.com/736x/4e/e6/e9/4ee6e9a7d2097e08dfff3a6a5e285eec.jpg"
+        "img": "https://i.pinimg.com/736x/4e/e6/e9/4ee6e9a7d2097e08dfff3a6a5e285eec.jpg",
+        "speed":{
+            "Walking":30,
+            "Swimming":20
+        }
     },
     "proficiencies": {
         "profBonus": 2,
