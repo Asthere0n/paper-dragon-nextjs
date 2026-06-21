@@ -16,6 +16,15 @@
   src: url('/fonts/ArchitectsDaughter-Regular.ttf') format('truetype');
 }
 
+html {
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+}
+
+body[data-scroll-locked] {
+  overflow-y: scroll !important;
+}
+
 body {
   display: flex;
   flex-direction: column;

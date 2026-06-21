@@ -39,7 +39,7 @@ export default function CharacterSheetViewer() {
                 {currentView}
             </div>
         </section>
-        <NavBar selector={setView} />
+        <NavBar selector={setView} activeView={view} />
         </CharacterContext.Provider>
     </>
     )

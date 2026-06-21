@@ -1,22 +1,34 @@
-import { useContext } from "react";
-import { CharacterContext } from "@/features/character-sheet/character-context";
 import { calcAbilityMod } from "@/lib/character/calcAbilityMod";
 
+export type ArmorClassOption = {
+    title: string
+    base: number
+    modifier?: string[]
+    DisadvantageStealth: boolean
+    AllowsShield: boolean
+    Equiped: boolean
+}
 
-function calculateAC(ArmorClass, shield) {
-    let finalAC = ArmorClass.base
-    const characterData = useContext(CharacterContext)
-    const abilityScores = characterData.proficiencies.abilityScores
+function calculateAC(
+    armorClass: ArmorClassOption,
+    shield: boolean,
+    abilityScores: Record<string, number>,
+    shieldBase: number
+) {
+    let finalAC = armorClass.base
 
-    if (ArmorClass.modifier) {
-        ArmorClass.modifier.forEach((ability) => {
-            finalAC += calcAbilityMod(abilityScores[ability])
-        });
+    armorClass.modifier?.forEach((ability) => {
+        const abilityScore = abilityScores[ability]
 
-        if(shield){
-            finalAC += characterData.combat.shield
+        if (typeof abilityScore === "number") {
+            finalAC += calcAbilityMod(abilityScore)
         }
+    });
+
+    if(shield && armorClass.AllowsShield){
+        finalAC += shieldBase
     }
+
     return finalAC
 }
 

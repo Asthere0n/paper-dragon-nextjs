@@ -1,11 +1,14 @@
-import React from 'react'
 import { useContext } from "react"
 import { CharacterContext } from "../../character-context"
 import { calcAbilityMod } from "@/lib/character/calcAbilityMod"
+import { abilityLabels, abilityPillClassName, abilityPillColors } from "../../ability-pill"
+import type { AbilityName } from "../../ability-pill"
+
+const formatSigned = (value: number) => `${value >= 0 ? "+" : ""}${value}`
 
 type ProficiencyLineProps = {
     title: string,
-    stat: string
+    stat: AbilityName
 }
 
 export default function SkillProficiencyLine({ title, stat }: ProficiencyLineProps) {
@@ -13,23 +16,39 @@ export default function SkillProficiencyLine({ title, stat }: ProficiencyLinePro
     const characterProficiencies = characterData.proficiencies
     const abilityMod = calcAbilityMod(characterProficiencies.abilityScores[stat])
 
-    // Recovering proficiency with the saving throw
-    let proficiency = 0
-    characterProficiencies.skillProf.map(ab=>{
-        if (ab.title == stat){
-            proficiency = ab.proficiency
-        }
-    })
+    const proficiency = characterProficiencies.skillProf.find(
+        (skill: { title: string; proficiency: number }) => skill.title === title
+    )?.proficiency ?? 0
 
-    // Calculating the bonus to roll
     const profBonus = proficiency * characterProficiencies.profBonus
     const bonusToRoll = profBonus + abilityMod
+    const abilityLabel = abilityLabels[stat]
+    const calculationLabel = `prof(${formatSigned(profBonus)}) + ${abilityLabel.toLowerCase()}(${formatSigned(abilityMod)}) = ${formatSigned(bonusToRoll)}`
+    const calculationId = `${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-skill-calculation`
+
     return (
-        <div className='mx-3 flex flex-grow-1 flex-wrap items-center justify-between gap-2 border-b-[3px] border-black px-2 py-2 odd:bg-white/50'>
+        <div className='mx-3 flex flex-grow-1 flex-col gap-1 border-b-[3px] border-black px-2 py-2 md:flex-row md:items-center md:justify-between md:gap-2'>
             <h3 className='uppercase tracking-wide'>{title}</h3>
-            <div className='flex items-center gap-2 sm:gap-3'>
-                <p className='rounded-full border-2 border-black bg-white px-2 text-xs uppercase'>{stat}</p>
-                <p className='min-w-10 border-[3px] border-black bg-[#ffd600] text-center text-lg shadow-[2px_2px_0_#111] sm:text-xl'>{bonusToRoll}</p>
+            <div className='flex items-center justify-end gap-2 md:gap-3'>
+                <div className='group relative'>
+                    <p
+                        className='min-w-10 cursor-help border-[3px] border-black bg-[#ffd600] text-center text-lg shadow-[2px_2px_0_#111] transition-transform group-hover:-translate-y-0.5 group-focus-within:-translate-y-0.5 sm:text-xl'
+                        tabIndex={0}
+                        aria-describedby={calculationId}
+                    >
+                        {formatSigned(bonusToRoll)}
+                    </p>
+                    <span
+                        id={calculationId}
+                        role="tooltip"
+                        className='pointer-events-none absolute right-0 top-[calc(100%+0.45rem)] z-20 w-max max-w-[14rem] border-[3px] border-black bg-white px-3 py-2 [font-family:Verdana,Geneva,sans-serif] text-xs font-bold normal-case leading-snug tracking-normal opacity-0 shadow-[4px_4px_0_#111] transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100'
+                    >
+                        {calculationLabel}
+                    </span>
+                </div>
+                <p className={`${abilityPillColors[stat]} ${abilityPillClassName}`}>
+                    {abilityLabel}
+                </p>
             </div>
         </div>
     )

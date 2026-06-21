@@ -1,6 +1,10 @@
 {
     "characterInfo": {
         "name": "Lancelot",
+        "ancestry":{
+            "title":"Human",
+            "variant":"Variant"
+        },
         "background": {
             "title": "Noble",
             "abilityScores": [
@@ -158,11 +162,71 @@
         ]
     },
     "class": [
-        {
-            "class": "Paladin",
-            "Subclass": "Oath of Vengeance",
-            "level": 2
-        }
+{
+        "Barbarian": false,
+        "subclass": "",
+        "level": 0
+    },
+    {
+        "Bard": false,
+        "subclass": "",
+        "level": 0
+    },
+    {
+        "Cleric": false,
+        "subclass": "",
+        "level": 0
+    },
+    {
+        "Druid": false,
+        "subclass": "",
+        "level": 0
+    },
+    {
+        "Fighter": false,
+        "subclass": "",
+        "level": 0
+    },
+    {
+        "Monk": false,
+        "subclass": "",
+        "level": 0
+    },
+    {
+        "Paladin": true,
+        "subclass": "Oath of Vengeance",
+        "level": 2
+    },
+    {
+        "Ranger": false,
+        "subclass": "",
+        "level": 0
+    },
+    {
+        "Rogue": false,
+        "subclass": "",
+        "level": 0
+    },
+    {
+        "Sorcerer": false,
+        "subclass": "",
+        "level": 0
+    },
+    {
+        "Warlock": true,
+        "subclass": "Hexblade",
+        "level": 1
+    },
+    {
+        "Wizard": false,
+        "subclass": "",
+        "level": 0
+    },
+    {
+        "Artificer": false,
+        "subclass": "",
+        "level": 0
+    }
     ],
     "feats": [
         {
@@ -182,11 +246,20 @@
     "combat": {
         "AC": [
             {
+                "title": "base",
+                "base": 10,
+                "modifier":["Dexterity"],
+                "DisadvantageStealth": false,
+                "AllowsShield": false,
+                "Equiped":false
+            },
+            {
                 "title": "Chain Mail",
                 "base": 16,
                 "modifier":[],
                 "DisadvantageStealth": true,
-                "AllowsShield": true
+                "AllowsShield": true,
+                "Equiped":true
             },
             {
                 "title": "Scale Mail",
@@ -195,7 +268,8 @@
                     "Dexterity"
                 ],
                 "DisadvantageStealth": true,
-                "AllowsShield":true
+                "AllowsShield":true,
+                "Equiped":false
             },
             {
                 "title": "Unarmed Defense",
@@ -205,10 +279,14 @@
                     "Wisdom"
                 ],
                 "DisadvantageStealth": false,
-                "AllowsShield": false
+                "AllowsShield": false,
+                "Equiped":false
             }
         ],
-        "shield":2,
+        "shield":{
+            "base":2,
+            "Equiped":true
+        },
         "weaponAttacks":[
             {
                 "title":"Shortsword",

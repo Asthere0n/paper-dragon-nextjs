@@ -8,7 +8,6 @@
     transition: left 0.3s cubic-bezier(.25, 1.7, .35, 1);
     z-index: 1;
     top: 50%;
-    left: 20px;
     transform: translateY(-50%); 
 }
 
@@ -65,7 +64,6 @@
     }
 
     .highlight {
-        left: 6px;
         height: 2.35rem;
         width: 2.35rem;
     }

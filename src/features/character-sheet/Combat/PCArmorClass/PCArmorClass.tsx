@@ -1,10 +1,10 @@
 import styles from "../../CharacterSheetViewer.module.css"
-import { useContext, useEffect, useState } from "react"
+import { useContext, useState } from "react"
 import { CharacterContext } from "../../character-context"
+import type { ArmorClassOption } from "./calculateAC"
 
 // Components
 import Armor from "./Armor/Armor"
-import Shield from "./Shield/Shield"
 
 
 type Props = {
@@ -13,31 +13,36 @@ type Props = {
 
 export default function PCArmorClass({ customStyles }: Props) {
   const characterData = useContext(CharacterContext)
-  const characterAC = characterData.combat.AC
+  const characterAC = characterData.combat.AC as ArmorClassOption[]
+  const equippedArmor = characterAC.find((armorClass) => armorClass.Equiped) ?? characterAC[0]
 
-  const [selectedAC, setSelectedAC] = useState(10)
-  const [shieldEquiped, setShieldEquiped] = useState(false)
+  const [selectedAC, setSelectedAC] = useState<ArmorClassOption>(equippedArmor)
+  const [shieldEquiped, setShieldEquiped] = useState(Boolean(characterData.combat.shield.Equiped && equippedArmor.AllowsShield))
 
-  useEffect(()=>{
-    if (!selectedAC.AllowsShield){
+  const handleArmorClassChange = (armorClass: ArmorClassOption) => {
+    setSelectedAC(armorClass)
+
+    if (!armorClass.AllowsShield){
       setShieldEquiped(false)
     }
-  },[selectedAC])
+  }
+
+  const isShieldEquiped = shieldEquiped && selectedAC.AllowsShield
 
   return (
     <div className={`${styles.vignette} col-start-1 row-start-1 row-end-2 flex flex-col`} style={customStyles}>
       <h2 className={styles.title}>
         Armor Class
       </h2>
-      <div className="flex flex-grow-1 w-full flex-col items-center justify-around gap-5 py-4 sm:flex-row sm:gap-3 sm:py-0">
+      <div className="flex min-h-0 flex-grow-1 w-full items-center justify-center py-1 sm:py-0">
         <Armor 
         armorOptions={characterAC} 
         selectedArmorClass={selectedAC}
-        onArmorClassChange={setSelectedAC}
-        isShieldEquiped={shieldEquiped}
+        onArmorClassChange={handleArmorClassChange}
+        isShieldEquiped={isShieldEquiped}
+        onShieldEquipedChange={setShieldEquiped}
         
         />
-        <Shield isShieldEquiped={shieldEquiped} equipeShield={setShieldEquiped} allowsShield={selectedAC.AllowsShield}/> 
       </div>
     </div>
   )
