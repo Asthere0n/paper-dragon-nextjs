@@ -1,0 +1,85 @@
+.nav {
+    position: relative; 
+    z-index: 1; 
+}
+
+.highlight {
+    position: absolute;
+    transition: left 0.3s cubic-bezier(.25, 1.7, .35, 1);
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+.link {
+    position: relative; 
+    z-index: 99;
+    transition: transform 0.18s ease-out;
+}
+
+.link a {
+    align-items: center;
+    display: flex;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+    justify-content: center;
+}
+
+.link svg {
+    height: 1.75rem;
+    width: 1.75rem;
+}
+
+.link:hover {
+    transform: translateY(-4px) rotate(-6deg);
+}
+
+@media (min-width: 640px) {
+    .link a {
+        min-height: 2rem;
+        min-width: 2rem;
+    }
+
+    .link svg {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+@media (max-width: 460px) {
+    .nav {
+        gap: 0.45rem;
+        padding-left: 0.45rem;
+        padding-right: 0.45rem;
+    }
+
+    .link a {
+        min-height: 2.35rem;
+        min-width: 2.35rem;
+    }
+
+    .link svg {
+        height: 1.55rem;
+        width: 1.55rem;
+    }
+
+    .highlight {
+        height: 2.35rem;
+        width: 2.35rem;
+    }
+}
+
+@media (max-width: 340px) {
+    .nav {
+        gap: 0.25rem;
+    }
+
+    .link a {
+        min-width: 2.1rem;
+    }
+
+    .link svg {
+        height: 1.4rem;
+        width: 1.4rem;
+    }
+}

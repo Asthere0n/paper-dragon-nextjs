@@ -1,0 +1,17 @@
+import styles from "../../CharacterSheetViewer.module.css"
+import SkillScroll from "./SkillScroll/SkillScroll"
+
+type Props = {
+  customStyles?: React.CSSProperties
+}
+
+export default function PCSkills({ customStyles }: Props) {
+  return (
+    <div className={`${styles.vignette} ${styles.fixedFrame} col-start-3 row-start-1 row-end-4 flex flex-col`} style={customStyles}>
+      <h2 className={styles.title}>
+        Skills
+      </h2>
+      <SkillScroll className={styles.scrollRows}/>
+    </div>
+  )
+}
